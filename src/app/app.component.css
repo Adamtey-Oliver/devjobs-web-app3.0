@@ -1,0 +1,56 @@
+/* .devjob-header {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .devjob-header img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+  }
+
+.devjobs-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+    max-width: 400px;
+    margin: 50px;
+    align-items: center;
+}
+   */
+
+   /* .devjob-header {
+    position: relative;
+    width: 100%; 
+    margin: 0 auto; 
+  } */
+  
+  .devjob-header img {
+    width:  100%;
+    max-width: 1440px;
+    display: block;
+    object-fit: cover; 
+  }
+  
+  .devjobs-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    height: 121px;
+    margin: 40px 10% auto 10%; 
+    margin-top: 90px;
+  }
+
+  @media (max-width: 768px) {
+    .devjobs-cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .devjob-header img {
+        height: 121px; /* Adjust the height for laptop or tablet view */
+      }
+  }
+  
+  
+  
