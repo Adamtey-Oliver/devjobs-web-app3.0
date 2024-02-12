@@ -1,9 +1,9 @@
 
 .h-contents {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px; 
+    padding: 50px; 
     position: absolute;
     top: 0;
     left: 0;
