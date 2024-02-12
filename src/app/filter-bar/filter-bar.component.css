@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 10px;
   }
   
   .filter-content div {
@@ -21,10 +21,19 @@
   }
   
   .filter-content input {
+    background-color: #bd0d0d;
     margin-right: 5px; 
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 3px;
   }
 
   .search-btn{
+    width: 123px;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
     color: #FFFFFF;
     background-color: #5964E0;
   }
