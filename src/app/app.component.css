@@ -1,20 +1,4 @@
-  
-  /* .devjob-header img {
-    width: 100%;
-    display: block;
-    object-fit: cover; 
-  }
-
-  .filter-bar{
-    border: 2px blue solid;
-    width: 1110px;
-    height: 80px;
-    margin: auto;
-    text-align: center;
-  }
-   */
-
-   .devjob-header {
+  .devjob-header {
     position: relative;
   }
   
@@ -32,7 +16,7 @@
     position: absolute;
     top: 80%;
     top: 80%;
-    left: 50%; /* Adjust the left value to half of the width */
+    left: 50%;
     transform: translateX(-50%);
     text-align: center;
   }
