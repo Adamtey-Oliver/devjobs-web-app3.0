@@ -1,5 +1,5 @@
   
-  .devjob-header img {
+  /* .devjob-header img {
     width: 100%;
     display: block;
     object-fit: cover; 
@@ -10,6 +10,30 @@
     width: 1110px;
     height: 80px;
     margin: auto;
+    text-align: center;
+  }
+   */
+
+   .devjob-header {
+    position: relative;
+  }
+  
+  .devjob-header img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .filter-bar {
+    border: 2px blue solid;
+    width: 80%;
+    height: 80px;
+    margin: auto; 
+    position: absolute;
+    top: 80%;
+    top: 80%;
+    left: 50%; /* Adjust the left value to half of the width */
+    transform: translateX(-50%);
     text-align: center;
   }
   
