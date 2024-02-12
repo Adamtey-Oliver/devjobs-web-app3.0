@@ -9,7 +9,7 @@
   }
   
   .filter-bar {
-    border: 2px blue solid;
+    background-color: #FFFFFF;
     width: 80%;
     height: 80px;
     margin: auto; 
@@ -41,7 +41,7 @@
       height: 121px; 
     }
   }
-  
+
   @media (max-width: 768px) {
     .devjobs-cards {
       grid-template-columns: repeat(1, 1fr);
