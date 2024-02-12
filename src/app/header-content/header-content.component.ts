@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './header-content.component.css'
 })
 export class HeaderContentComponent {
-
+  
 }
