@@ -15,7 +15,21 @@
     margin: 0;
   }
   
-  .h-toggle img {
+  .h-toggle {
     display: flex;
-    gap: 10px; 
+    justify-content: space-around;
+    align-items: center; 
   }
+  
+  .h-toggle img {
+    max-width: 100%;
+  }
+  
+  .h-toggle input {
+    margin: 10px;
+    width: 48px;
+    height: 24px;
+    border: none;
+    border-radius: 20px;
+  }
+  
