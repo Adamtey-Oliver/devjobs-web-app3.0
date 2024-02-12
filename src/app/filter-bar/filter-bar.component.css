@@ -1,4 +1,4 @@
-.filter-content {
+/* .filter-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -8,4 +8,32 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
+  } */
+
+  .filter-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    /* gap: 50px;  */
   }
+  
+  .filter-content div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-content img {
+    max-width: 100%; 
+    padding: 20px;
+  }
+  
+  /* Additional styling as needed */
+  .filter-content p {
+    margin: 0;
+  }
+  
+  .filter-content input {
+    margin-right: 5px; /* Adjust spacing between checkbox and text as needed */
+  }
+  
