@@ -1,21 +1,9 @@
-/* .filter-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-  } */
 
   .filter-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 15px;
-    /* gap: 50px;  */
   }
   
   .filter-content div {
@@ -28,12 +16,16 @@
     padding: 20px;
   }
   
-  /* Additional styling as needed */
   .filter-content p {
     margin: 0;
   }
   
   .filter-content input {
-    margin-right: 5px; /* Adjust spacing between checkbox and text as needed */
+    margin-right: 5px; 
+  }
+
+  .search-btn{
+    color: #FFFFFF;
+    background-color: #5964E0;
   }
   
