@@ -8,6 +8,7 @@
   .filter-bar{
     border: 2px blue solid;
     width: 1110px;
+    height: 80px;
     margin: auto;
     text-align: center;
   }
