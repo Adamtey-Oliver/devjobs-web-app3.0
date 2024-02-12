@@ -1,4 +1,14 @@
 
+.h-contents h2,
+.h-toggle input {
+  color: black;
+}
+
+.dark-text .h-contents h2,
+.dark-text .h-toggle input {
+  color: white;
+}
+
 .h-contents {
     display: flex;
     justify-content: space-around;
