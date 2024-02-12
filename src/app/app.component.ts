@@ -14,6 +14,9 @@ import { ThemeService } from './theme.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   isDarkMode: boolean = false;
 
   constructor(private themeService: ThemeService) {}
@@ -35,5 +38,11 @@ export class AppComponent implements OnInit {
       filterBar.style.backgroundColor = this.isDarkMode ? '#121721' : 'white';
       filterBar.style.color = this.isDarkMode ? 'white' : 'black';
     }
+
+     const jobsCard = document.querySelectorAll('.jobs-card') as NodeListOf<HTMLElement>;
+     jobsCard.forEach((card) => {
+       card.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
+       card.style.color = this.isDarkMode ? 'white' : 'black';
+     });
   }
 }

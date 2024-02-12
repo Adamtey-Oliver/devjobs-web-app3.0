@@ -11,9 +11,10 @@
 
 .h-contents {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 50px; 
+    /* margin: 50px; */
+    padding: 20px; 
     position: absolute;
     top: 0;
     left: 0;
