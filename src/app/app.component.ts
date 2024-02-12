@@ -14,5 +14,13 @@ import { HeaderContentComponent } from './header-content/header-content.componen
 })
 export class AppComponent {
   title = 'devjobs-web-app';
- 
+
+  isDarkMode: boolean = false;
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.style.backgroundColor = this.isDarkMode ? 'black' : 'white';
+    document.body.style.color = this.isDarkMode ? 'white' : 'black';
+  }
+
 }
