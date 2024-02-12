@@ -3,9 +3,15 @@
         <h2>devjobs</h2>
     </div>
 
-    <div class="h-toggle">
-        <img src="/src/assets/desktop/icon-sun.svg" alt="">
-        <img src="/src/assets/desktop/icon-moon.svg" alt="">
-        <h2>devjobs</h2>
-    </div>
+    <!-- <div class="h-toggle">
+        <img src="../assets/desktop/icon-sun.svg" alt="">
+        <input type="reset" value="">
+        <img src="../assets/desktop/icon-moon.svg" alt="">
+    </div> -->
+
+     <div class="h-toggle">
+    <img [src]="isDarkMode ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'" alt="" (click)="toggleTheme()">
+    <input type="reset" value="" [style.backgroundColor]="isDarkMode ? 'black' : 'white'" [style.color]="isDarkMode ? 'white' : 'black'" (click)="toggleTheme()">
+    <img [src]="isDarkMode ? '../assets/desktop/icon-sun.svg' : '../assets/desktop/icon-moon.svg'" alt="" (click)="toggleTheme()">
+  </div>
 </div>
