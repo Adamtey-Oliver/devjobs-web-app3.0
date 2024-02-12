@@ -1,11 +1,12 @@
 <div class="h-contents">
     <div class="h-title">
-        <h2>devjobs</h2>
+      <h2 [style.color]="isDarkMode ? 'white' : 'black'">devjobs</h2>
     </div>
-
-     <div class="h-toggle">
-    <img [src]="isDarkMode ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'" alt="" (click)="toggleTheme()">
-    <input type="reset" value="" [style.backgroundColor]="isDarkMode ? 'black' : 'white'" [style.color]="isDarkMode ? 'white' : '#121721'" (click)="toggleTheme()">
-    <img [src]="isDarkMode ? '../assets/desktop/icon-sun.svg' : '../assets/desktop/icon-moon.svg'" alt="" (click)="toggleTheme()">
+  
+    <div class="h-toggle">
+      <img [src]="isDarkMode ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'" alt="" (click)="toggleTheme()">
+      <input type="reset" value="" [style.backgroundColor]="isDarkMode ? '#121721' : 'white'" [style.color]="isDarkMode ? 'white' : 'black'" (click)="toggleTheme()">
+      <img [src]="isDarkMode ? '../assets/desktop/icon-sun.svg' : '../assets/desktop/icon-moon.svg'" alt="" (click)="toggleTheme()">
+    </div>
   </div>
-</div>
+  
