@@ -1,14 +1,13 @@
   
   .devjob-header img {
-    width:  100%;
-    max-width: 1440px;
+    width: 100%;
     display: block;
     object-fit: cover; 
   }
 
   .filter-bar{
     border: 2px blue solid;
-    width: 400px;
+    width: 1110px;
     margin: auto;
     text-align: center;
   }
@@ -28,7 +27,7 @@
     }
 
     .devjob-header img {
-        height: 121px; /* Adjust the height for laptop or tablet view */
+        height: 121px; 
       }
   }
   
