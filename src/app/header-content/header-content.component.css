@@ -24,22 +24,47 @@
   .h-title {
     margin: 0;
   }
-  
+   
+  .h-toggle img {
+    margin: 10PX;
+  }  
   .h-toggle {
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
   }
   
-  .h-toggle img {
-    max-width: 100%;
+  input[type="checkbox"] {
+    display: none;
   }
   
-  .h-toggle input {
-    margin: 10px;
+  label {
+    display: block;
     width: 48px;
     height: 24px;
-    border: none;
-    border-radius: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked + label {
+    background-color: white;
+  }
+  
+  label::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #5964E0;
+    border-radius: 50%;
+    top: 3px;
+    left: 1px;
+    transition: transform 0.3s ease;
+  }
+  
+  input[type="checkbox"]:checked + label::before {
+    transform: translateX(20px);
   }
   

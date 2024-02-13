@@ -5,5 +5,17 @@
     background-color: #5964E0;
     border: none;
     justify-content: center;
-    margin-top: 100%; 
-  }
+    margin: 89rem 0px 5rem 36rem; 
+}
+
+@media screen and (max-width: 1024px)  {
+    .load-more-btn {
+        margin: 130rem 0 5rem 25rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .load-more-btn {
+        margin: 260rem 0 5rem 12rem;
+    }
+}

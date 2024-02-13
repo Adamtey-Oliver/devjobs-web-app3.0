@@ -5,7 +5,9 @@
   
     <div class="h-toggle">
       <img [src]="isDarkMode ? '../assets/desktop/icon-moon.svg' : '../assets/desktop/icon-sun.svg'" alt="" (click)="toggleTheme()">
-      <input type="reset" value="" [style.backgroundColor]="isDarkMode ? '#121721' : 'white'" [style.color]="isDarkMode ? 'white' : 'black'" (click)="toggleTheme()">
+      <!-- <input type="reset" value="" [style.backgroundColor]="isDarkMode ? '#121721' : 'white'" [style.color]="isDarkMode ? 'white' : 'black'" (click)="toggleTheme()"> -->
+      <input type="checkbox" id="themeSwitch" [checked]="isDarkMode" (change)="toggleTheme()">
+      <label for="themeSwitch"></label>
       <img [src]="isDarkMode ? '../assets/desktop/icon-sun.svg' : '../assets/desktop/icon-moon.svg'" alt="" (click)="toggleTheme()">
     </div>
   </div>
