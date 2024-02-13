@@ -4,7 +4,7 @@
     align-items: center;
     padding-top: 10px;
   }
-  
+
   .filter-content div {
     display: flex;
     align-items: center;
@@ -20,13 +20,14 @@
   }
   
   .filter-content input {
-    background-color: #bd0d0d;
-    margin-right: 5px; 
+    margin-right: 5px;
     width: 24px;
     height: 24px;
-    border: none;
+    border: none !important;
     border-radius: 3px;
+    background-color: #6E8098 !important; 
   }
+  
 
   .search-btn{
     width: 123px;

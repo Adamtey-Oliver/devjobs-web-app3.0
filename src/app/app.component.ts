@@ -5,11 +5,12 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import { DevjobsCardComponent } from './devjobs-card/devjobs-card.component'; 
 import { HeaderContentComponent } from './header-content/header-content.component';
 import { ThemeService } from './theme.service';
+import { LoadMoreBtnComponent } from './load-more-btn/load-more-btn.component';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, DevjobsCardComponent,
-    FilterBarComponent, HeaderContentComponent],
+    FilterBarComponent, HeaderContentComponent, LoadMoreBtnComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -30,12 +31,12 @@ export class AppComponent implements OnInit {
 
   updateTheme() {
     const body = document.body;
-    body.style.backgroundColor = this.isDarkMode ? '#121721' : 'white';
+    body.style.backgroundColor = this.isDarkMode ? '#121721' : '#F2F2F2';
     body.style.color = this.isDarkMode ? 'white' : 'black';
 
     const filterBar = document.querySelector('.filter-bar') as HTMLElement;
     if (filterBar) {
-      filterBar.style.backgroundColor = this.isDarkMode ? '#121721' : 'white';
+      filterBar.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
       filterBar.style.color = this.isDarkMode ? 'white' : 'black';
     }
 
