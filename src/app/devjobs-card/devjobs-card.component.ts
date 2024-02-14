@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';  
-
+import { DevJobsService } from '../devjobs.service.service';
 @Component({
   selector: 'devjobs-card',
   standalone: true,
