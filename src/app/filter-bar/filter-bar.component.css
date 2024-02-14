@@ -38,3 +38,54 @@
     background-color: #5964E0;
   }
   
+
+  @media (max-width: 768px) { 
+    .search-img{
+      display: none;
+    }  
+    .filter-content .search-btn {
+      /* display: none;  */
+    }
+  
+    .filter-content .search-icon {
+      background-image: url('/assets/desktop/icon-search.svg');
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      cursor: pointer;
+    }
+    .filter-content div {
+      margin-bottom: 10px;
+    }
+  
+    /* .filter-content img {
+      padding: 10px;
+    } */
+  
+    .filter-content .filter-text {
+      font-size: 16px; 
+      white-space: nowrap; 
+      width: 103px;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+    .filter-content .filter-location {
+      font-size: 12px; 
+      white-space: nowrap; 
+      max-width: 0px;
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+    }
+    .filter-content .location{
+      display: none;
+    }
+    .filter-content .fulltime{
+      display: none;
+    }
+    .filter-content .checkbox{
+      display: none;
+      background-image: url('/src/assets/desktop/icon-search.svg');
+    }
+  }
+  
+  

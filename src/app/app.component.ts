@@ -6,7 +6,7 @@ import { DevjobsCardComponent } from './devjobs-card/devjobs-card.component';
 import { HeaderContentComponent } from './header-content/header-content.component';
 import { ThemeService } from './theme.service';
 import { LoadMoreBtnComponent } from './load-more-btn/load-more-btn.component';
-import { DevJobsService } from './devjobs.service.service'; 
+
 @Component({
   selector: 'app-root',
   standalone: true,
