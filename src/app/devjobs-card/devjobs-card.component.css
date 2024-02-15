@@ -1,24 +1,90 @@
-.jobs-card {
-    margin-bottom: 40px;
-    text-align: center;
-    border-radius: 4px;
-    padding: 20px 0;
-    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, .2), 0 2px 8px 0 rgba(0, 0, 0, .14), 0 4px 8px -1px rgba(0, 0, 0, .12);
-}
+/* .jobs-container {
+    border: 2px solid blue;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+    margin: 40px auto;
+    margin-top: 120px;
+    width: 1110px;
+  } */
   
-.jobs-card .jobs-title {
-font-size: 27px;
-font-weight: bold;
+  .jobs-container {
+    border: 2px solid blue;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+    margin: 40px auto;
+    margin-top: 120px;
+    max-width: 1200px; 
+    width: 90%; 
 }
+
+  /* .jobs-card {
+    width: 350px;
+    height: 253;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+  } */
   
-.jobs-card .jobs-description {
-max-width: 360px;
-margin: 0 auto;
-margin-top: 15px;
-user-select: none;
-}
+  .jobs-card {
+    width: 350px; 
+    max-width: 90%; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
   
-.jobs-card img {
-border-radius: 4px;
-margin-top: 10px;
+  .jobs-card div[style^="background-color"] {
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-top: -38px;
+    position: absolute;
+  }
+  
+  .jobs-card div[style^="background-color"] img {
+    width: 20px;
+    height: 100%;
+    padding-left: 15px;
+    object-fit: contain;
+  }
+
+.jobs-card p,
+.jobs-card h3,
+.jobs-card h4 {
+    padding-left: 10px;
 }
+
+.jobs-card h4 {
+  color: #4b5563;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 10px;
+}
+
+  
+  
+  @media (max-width: 1024px) {
+    .jobs-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .jobs-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

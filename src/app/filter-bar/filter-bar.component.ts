@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FilterBarComponent {
   isMobile: boolean = false;
+searchQuery: any;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {

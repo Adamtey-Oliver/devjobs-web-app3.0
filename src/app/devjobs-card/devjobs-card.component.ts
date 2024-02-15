@@ -1,15 +1,26 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';  
+import { RouterLink } from '@angular/router';
+import { JobService } from '../job.service';
+import { Jobs } from '../model/jobsdata';
 
 @Component({
   selector: 'devjobs-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './devjobs-card.component.html',
   styleUrl: './devjobs-card.component.css'
 })
-export class DevjobsCardComponent {
+export class DevjobsCardComponent implements OnInit {
 
-  // @Input()
-  // title: string;
+  jobs: Jobs[] = [];
+  filteredJobs: any;
+
+  constructor(private jobService: JobService) {}
+
+  ngOnInit(): void {
+      this.jobService.getJobs().subscribe(job => {
+        this.jobs = job
+      })
+  }
 }
