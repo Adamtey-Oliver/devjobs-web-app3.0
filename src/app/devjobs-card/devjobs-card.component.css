@@ -67,8 +67,13 @@
     padding-left: 10px;
 }
 
+.jobs-card p{
+    color: #4b5563;
+}
+
+
 .jobs-card h4 {
-  color: #4b5563;
+  color: #5964E0;
   font-weight: bold;
   margin: 0;
   padding-left: 10px;
