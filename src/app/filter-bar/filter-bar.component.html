@@ -10,11 +10,27 @@
     </div>
 
     <div>
-        <input style="color: #6E8098;" type="checkbox" name="checkbox" id="" class="checkbox">
-        <p class="fulltime">Full Time Only</p>
+        <input *ngIf="!isMobile" type="checkbox" name="checkbox" id="" class="checkbox" [(ngModel)]="isFilterActive">
+        <img *ngIf="isMobile" src="assets/mobile/icon-filter.svg" alt="Filter Icon" (click)="toggleFilter()">
+        <p class="fulltime">{{ isFilterActive ? 'Filter activated' : 'Full Time Only' }}</p>
     </div>
 
     <div>
-        <button class="search-btn">Search</button>
+        <button *ngIf="!isMobile" class="search-btn" (click)="toggleSearch()">Search</button>
+        <img style="height: 8px; width: 8px;" *ngIf="isMobile" src="../../assets/desktop/icon-search.svg" alt="Search Icon" class="search-btn" (click)="toggleSearch()">
     </div>
+      
+      
 </div>
+
+
+    <!-- <div>
+        <input style="color: #6E8098;" type="checkbox" name="checkbox" id="" class="checkbox">
+        <p class="fulltime">Full Time Only</p>
+    </div> -->
+
+      
+      
+    <!-- <div>
+        <button class="search-btn">Search</button>
+    </div> -->
