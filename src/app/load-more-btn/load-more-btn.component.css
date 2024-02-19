@@ -5,7 +5,7 @@
     background-color: #5964E0;
     border: none;
     justify-content: center;
-    margin: 89rem 0px 5rem 36rem; 
+    margin: 3rem 5rem 5rem 36rem; 
 }
 
 @media screen and (max-width: 1024px)  {
@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 768px){
     .load-more-btn {
-        margin: 275rem 0 4rem 7rem;
+        margin: 5rem 0rem 4rem 8rem;
     }
 }
 
