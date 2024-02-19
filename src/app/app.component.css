@@ -15,7 +15,7 @@
     height: 80px;
     margin: auto; 
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -50,6 +50,11 @@
     .devjob-header img {
         height: 121px; 
       }
+
+
+    .filter-bar {
+      top: 70%;
+    }
   }
 
 
