@@ -1,13 +1,24 @@
+
+
 <div class="filter-content">
     <div>
         <img src="../assets/desktop/icon-search.svg" alt="" class="search-img">
-        <p class="filter-text">Filter by title, companies, expertise…</p>
+        <input class="filter-text" type="text" [(ngModel)]="filterText" placeholder="Filter by title, companies, expertise…">
+    </div>
+    
+    <div>
+        <img src="../assets/desktop/icon-location.svg" alt="" class="location">
+        <input class="filter-location" type="text" [(ngModel)]="filterLocation" placeholder="Filter by location…">
+    </div>
+    <!-- <div>
+        <img src="../assets/desktop/icon-search.svg" alt="" class="search-img">
+        <input class="filter-text" type="text" placeholder="Filter by title, companies, expertise…">
     </div>
 
     <div>
         <img src="../assets/desktop/icon-location.svg" alt="" class="location">
-        <p class="filter-location">Filter by location…</p>
-    </div>
+        <input class="filter-location" type="text" placeholder="Filter by location…">
+    </div> -->
 
     <div>
         <input *ngIf="!isMobile" type="checkbox" name="checkbox" id="" class="checkbox" [(ngModel)]="isFilterActive">
@@ -16,21 +27,7 @@
     </div>
 
     <div>
-        <button *ngIf="!isMobile" class="search-btn" (click)="toggleSearch()">Search</button>
+        <button type="button" *ngIf="!isMobile" class="search-btn"  (click)="applyFilters()">Search</button>
         <img style="height: 8px; width: 8px;" *ngIf="isMobile" src="../../assets/desktop/icon-search.svg" alt="Search Icon" class="search-btn" (click)="toggleSearch()">
     </div>
-      
-      
 </div>
-
-
-    <!-- <div>
-        <input style="color: #6E8098;" type="checkbox" name="checkbox" id="" class="checkbox">
-        <p class="fulltime">Full Time Only</p>
-    </div> -->
-
-      
-      
-    <!-- <div>
-        <button class="search-btn">Search</button>
-    </div> -->
