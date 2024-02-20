@@ -5,6 +5,20 @@
     padding-top: 10px;
   }
 
+  .filter-content .filter-text{
+    width: 312px;
+    border: none;
+    outline: none;
+    caret-color: #5964E0;
+  }
+
+  .filter-content .filter-location{
+    width: 169px;
+    border: none;
+    outline: none;
+    caret-color: #5964E0;
+  }
+
   .filter-content div {
     display: flex;
     align-items: center;
@@ -19,7 +33,7 @@
     margin: 0;
   }
   
-  .filter-content input {
+  .filter-content .checkbox {
     margin-right: 5px;
     width: 24px;
     height: 24px;
@@ -36,6 +50,7 @@
     border-radius: 5px;
     color: #FFFFFF;
     background-color: #5964E0;
+    cursor: pointer;
   }
   
 
