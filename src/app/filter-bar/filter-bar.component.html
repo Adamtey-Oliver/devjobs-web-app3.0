@@ -1,33 +1,102 @@
+<!-- <div class="absolute top-0 bottom-0 left-0 right-0 h-screen z-10 md:hidden">
+    <span 
+        class="bg-close absolute top-[28%] right-[8%] w-[30px] h-[30px] rounded-[10px] flex items-center justify-center cursor-pointer" 
+        (click)="jobService.isModalOpen = false"
+    >
+        <img src="../../../assets/mobile/icon-close.svg" class="w-[45%]" alt="icon-close">
+    </span>
+    <div class="absolute overflow-hidden top-[35%] left-[8%] w-[85%] h-[220px] rounded-[10px] modal-bg">
+        <div class="w-full h-[70px] py-6 px-7 border-b flex items-center gap-3 mb-3">
+            <img src="../../../assets/desktop/icon-location.svg" alt="icon-location">
+            <input 
+                type="text"
+                placeholder="Filter by Location..."
+                [(ngModel)]="filterLocation"
+                class="text-base p-[10px] overflow-hidden border-none focus:outline-none w-full caret-primary"
+            >
+        </div>
+        <div class="w-full h-[60px] py-6 px-7 flex items-center gap-4">
+            <input 
+                type="checkbox"
+                class="peer relative appearance-none w-6 h-6 border rounded cursor-pointer focus:outline-none checked:bg-primary after:content-[''] after:w-full after:h-full after:absolute after:left-0 after:top-0 after:bg-no-repeat after:bg-center after:bg-[length:15px]"
+                [(ngModel)]="filterFullTime"
+            >
+            <h4 class="font-bold">Full Time Only</h4>
+        </div>
+        <div class="px-7">
+            <button class="btn-primary w-full mt-3 py-[10px] rounded-[7px]" (click)="applyFilteredJobs()">Search</button>
+        </div>
+    </div>
+</div> -->
 
 
-<div class="filter-content">
+
+
+<!-- <div class="filter-content">
     <div>
         <img src="../assets/desktop/icon-search.svg" alt="" class="search-img">
-        <input class="filter-text" type="text" [(ngModel)]="filterText" placeholder="Filter by title, companies, expertise…">
+        <input class="filter-text" type="text" [(ngModel)]="filterTitle" placeholder="Filter by title, companies, expertise…">
     </div>
     
     <div>
         <img src="../assets/desktop/icon-location.svg" alt="" class="location">
-        <input class="filter-location" type="text" [(ngModel)]="filterLocation" placeholder="Filter by location…">
-    </div>
-    <!-- <div>
-        <img src="../assets/desktop/icon-search.svg" alt="" class="search-img">
-        <input class="filter-text" type="text" placeholder="Filter by title, companies, expertise…">
+        <input class="filter-location"  type="text" [(ngModel)]="filterLocation" placeholder="Filter by location…">
     </div>
 
     <div>
-        <img src="../assets/desktop/icon-location.svg" alt="" class="location">
-        <input class="filter-location" type="text" placeholder="Filter by location…">
-    </div> -->
-
-    <div>
-        <input *ngIf="!isMobile" type="checkbox" name="checkbox" id="" class="checkbox" [(ngModel)]="isFilterActive">
+        <input type="checkbox" [(ngModel)]="fillterFullTime">
         <img *ngIf="isMobile" src="assets/mobile/icon-filter.svg" alt="Filter Icon" (click)="toggleFilter()">
         <p class="fulltime">{{ isFilterActive ? 'Filter activated' : 'Full Time Only' }}</p>
     </div>
 
     <div>
-        <button type="button" *ngIf="!isMobile" class="search-btn"  (click)="applyFilters()">Search</button>
-        <img style="height: 8px; width: 8px;" *ngIf="isMobile" src="../../assets/desktop/icon-search.svg" alt="Search Icon" class="search-btn" (click)="toggleSearch()">
+        <button class="search-btn"  (click)="filterJobs()">Search</button>
+        <img style="height: 8px; width: 8px;" *ngIf="isMobile" src="../../assets/desktop/icon-search.svg" alt="Search Icon" class="search-btn"  (click)="filterJobs()">
     </div>
-</div>
+</div> -->
+
+
+
+
+<!-- <devjobs-card *ngIf="jobService.isModalOpen" (filterApplied)="applyFilters($event)"></devjobs-card> -->
+
+
+
+  <!-- <div class="filter-content">
+    <span 
+        (click)="jobService.isModalOpen = false"
+    >
+        <img src="../../../assets/mobile/icon-close.svg">
+    </span>
+
+    <div>
+        <div>
+            <img src="../../../assets/desktop/icon-location.svg" alt="icon-location">
+            <input 
+                type="text"
+                placeholder="Filter by Location..."
+                [(ngModel)]="filterLocation"
+            >
+        </div>
+
+        <div>
+            <img src="../../../assets/desktop/icon-location.svg" alt="icon-location">
+            <input 
+                type="text"
+                placeholder="Filter by Location..."
+                [(ngModel)]="filterLocation"
+            >
+        </div>
+
+        <div>
+            <input 
+                type="checkbox"
+                [(ngModel)]="filterFullTime"
+            >
+            <p>Full Time Only</p>
+        </div>
+        <div>
+            <button (click)="applyFilteredJobs()">Search</button>
+        </div>
+    </div>
+</div> -->

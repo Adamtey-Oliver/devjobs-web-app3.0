@@ -1,3 +1,165 @@
+
+/* filter */
+.filter-bar{
+  background-color: #FFFFFF;
+  width: 80%;
+  height: 80px;
+  margin: auto; 
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.filter-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.filter-content .filter-text{
+  width: 312px;
+  border: none;
+  outline: none;
+  caret-color: #5964E0;
+}
+
+.filter-content .filter-location{
+  width: 169px;
+  border: none;
+  outline: none;
+  caret-color: #5964E0;
+}
+
+.filter-content div {
+  display: flex;
+  align-items: center;
+}
+
+.filter-content img {
+  max-width: 100%; 
+  padding: 20px;
+}
+
+.filter-content p {
+  margin: 0;
+}
+
+.filter-content .checkbox {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  /* border: none !important; */
+  border-radius: 3px;
+  background-color: #6E8098 !important; 
+}
+
+
+.search-btn{
+  width: 123px;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: #5964E0;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1024px){ 
+  .filter-bar {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+  }
+
+  .filter-content .search-btn {
+    width: 80px;
+    height: 48px;
+    cursor: pointer;
+  }
+
+  /* .filter-content div {
+    margin-bottom: 10px;
+  } */
+
+  .filter-content .filter-text {
+    font-size: 16px; 
+    white-space: nowrap; 
+    width: 103px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  .filter-content .filter-location {
+    font-size: 16px; 
+    white-space: nowrap; 
+    max-width: 133px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+
+  .filter-content .checkbox{
+    width: 132px;
+    /* background-image: url('/src/assets/desktop/icon-check.svg'); */
+  }
+}
+
+
+
+@media (max-width: 768px) { 
+
+  .filter-bar {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+  }
+  
+  .search-img{
+    display: none;
+  }  
+
+
+  .filter-content .search-btn {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+  }
+  .filter-content div {
+    margin-bottom: 10px;
+  }
+
+
+  .filter-content .filter-text {
+    font-size: 16px; 
+    white-space: nowrap; 
+    width: 103px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  .filter-content .filter-location {
+    font-size: 12px; 
+    white-space: nowrap; 
+    max-width: 0px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  .filter-content .location{
+    display: none;
+  }
+  .filter-content .fulltime{
+    display: none;
+  }
+  .filter-content .checkbox{
+    display: none;
+  }
+}
+
+
+
+
+
 /* .jobs-container {
     border: 2px solid blue;
     display: grid;
@@ -16,7 +178,20 @@
     margin: 40px auto;
     margin-top: 120px;
     max-width: 1200px; 
-    width: 90%; 
+    width: 85%; 
+
+
+    /* width: 350px;  */
+    /* max-width: 90%;  */
+    /* height: auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden; */
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+    /* margin: 20px auto; */
+    box-sizing: border-box;
 }
 
   /* .jobs-card {
@@ -59,6 +234,7 @@
     height: 100%;
     padding-left: 15px;
     object-fit: contain;
+    cursor: pointer;
   }
 
 .jobs-card p,
@@ -93,3 +269,30 @@
     }
   }
   
+
+
+  .load-more-btn {
+    width: 141px;
+    height: 48px;
+    color: #FFFFFF;
+    background-color: #5964E0;
+    border: none;
+    justify-content: center;
+    margin: 3rem 5rem 5rem 36rem; 
+}
+
+@media screen and (max-width: 1024px)  {
+    .load-more-btn {
+        margin: 5rem 6rem 5rem 22rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .load-more-btn {
+        margin: 5rem 0rem 4rem 8rem;
+    }
+}
+
+@media (max-width: 480px){
+    
+}

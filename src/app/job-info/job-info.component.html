@@ -1,0 +1,62 @@
+<div class="job-header" *ngIf="!loading && !error">
+
+    <div class="company-img" [style.background-color]="jobInfo.logoBackground">
+        <img style="width: 81px; height: 140px; object-fit: contain;" [src]="jobInfo.logo" alt="job.title">
+    </div>
+    
+    <span style="flex-grow: 1; ">
+        <h3 style="width: 78px; margin-left: 10%;" >{{ jobInfo.company}}</h3>
+        <p style="margin-top: 1px; margin-right: 50%;">{{ extractDomainName(jobInfo.website) }}</p>
+    </span>
+    <button class="company-site" (click)="redirect(jobInfo.website)">Company Site</button>
+</div>
+
+
+<div class="jobs-info">
+    <div *ngIf="loading">   Loading... please wait </div>
+
+    <div *ngIf="error && !loading"> {{ error }} </div>
+
+    <div *ngIf="!loading && !error" class="info-card">
+        <div class="job-details">
+            <div>
+              <div style="display: flex; justify-content: space-around;">
+                  <p>{{ jobInfo.postedAt }}</p>
+                  <span></span>
+                  <p class="tracking-wide">{{ jobInfo.contract }}</p>
+              </div>
+              <h3>{{ jobInfo.position }}</h3>
+              <h4>{{ jobInfo.location }}</h4>
+            </div>
+          <button (click)="redirect(jobInfo.website)"> Apply Now </button>
+        </div>
+
+      <p>{{ jobInfo.description }}</p>
+
+      <h3> Requirements </h3>
+      
+      <p>{{ jobInfo.requirements.content }}</p>
+      <ul>
+          <li *ngFor="let list of jobInfo.requirements.items"> {{ list }} </li>
+      </ul>
+
+      <h3>What You Will Do</h3>
+      <p>{{ jobInfo.role.content }}</p>
+      <ol>
+          <li *ngFor="let list of jobInfo.role.items"> <p>{{ list }}</p> </li>
+      </ol>
+    </div>
+
+</div>
+
+<div class="jobs-footer" *ngIf="!loading && !error">
+    <div>
+        <div>
+            <span>
+                <h3>{{ jobInfo.position }}</h3>
+                <p>{{ jobInfo.company }}</p>
+            </span>
+            <button (click)="redirect(jobInfo.website)"> Apply Now </button>
+        </div>
+    </div>
+</div>

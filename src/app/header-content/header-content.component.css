@@ -13,16 +13,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* max-width: 1200px;  */
+    /* width: 10%;  */
     padding: 20px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    width: 95%;
     box-sizing: border-box;
 }
   
   .h-title {
     margin: 0;
+    padding-left: 90px;
   }
    
   .h-toggle img {
@@ -57,7 +61,7 @@
     position: absolute;
     width: 18px;
     height: 18px;
-    background-color: #939BF4;
+    background-color: #5964E0;
     border-radius: 50%;
     top: 3px;
     left: 1px;

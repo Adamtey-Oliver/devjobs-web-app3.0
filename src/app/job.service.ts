@@ -12,14 +12,26 @@
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
 import { Jobs } from './model/jobsdata';
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
+  Jobs() {
+    throw new Error('Method not implemented.');
+  }
+  private filterSource = new BehaviorSubject<{ filterLocation: string, filterText: string }>({ filterLocation: '', filterText: '' });
+  currentFilters = this.filterSource.asObservable();
+
+  updateFilters(filters: { filterLocation: string, filterText: string }): void {
+    this.filterSource.next(filters);
+  }
+
+  
   private devjobsUrl = 'http://localhost:3000/Jobs'
-  get: any;
+  public isModalOpen: boolean = false 
+
   constructor(private http: HttpClient) { }
   getJobs(): Observable<Jobs[]> {
     return this.http.get<Jobs[]>(this.devjobsUrl)
@@ -27,6 +39,7 @@ export class JobService {
         catchError(this.handleError)
       )
   }
+
   private handleError(error: HttpErrorResponse): Observable<never> {
     if(error.error instanceof ErrorEvent) {
       console.error('An error occurred: ', error.error.message)

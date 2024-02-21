@@ -1,4 +1,5 @@
 export interface Jobs {
+    filter(arg0: (job: any) => any): any;
     id: string;
     company: string;
     logo: string;

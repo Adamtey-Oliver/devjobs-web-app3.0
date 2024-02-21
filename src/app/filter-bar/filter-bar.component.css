@@ -1,4 +1,4 @@
-  .filter-content {
+  /* .filter-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -37,7 +37,7 @@
     margin-right: 5px;
     width: 24px;
     height: 24px;
-    /* border: none !important; */
+   
     border-radius: 3px;
     background-color: #6E8098 !important; 
   }
@@ -62,9 +62,6 @@
       cursor: pointer;
     }
 
-    /* .filter-content div {
-      margin-bottom: 10px;
-    } */
 
     .filter-content .filter-text {
       font-size: 16px; 
@@ -81,9 +78,6 @@
       text-overflow: ellipsis; 
     }
 
-    .filter-content .checkbox{
-      /* background-image: url('/src/assets/desktop/icon-check.svg'); */
-    }
   }
   
   
@@ -131,4 +125,4 @@
   }
 
 
- 
+  */

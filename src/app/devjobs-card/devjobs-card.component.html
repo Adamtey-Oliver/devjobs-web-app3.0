@@ -1,12 +1,58 @@
+<div class="filter-bar">
+    <div class="filter-content">
+      <div>
+        <img src="../../../assets/desktop/icon-search.svg" alt="icon-search">
+        <input class="filter-text" type="text" [(ngModel)]="filterTitle" placeholder="Filter by title, companies, expertise…">
+      </div>
+      
+      <div>
+        <div style="border-left: 1px green solid; border-right: 1px green solid;">
+          <img src="../../../assets/desktop/icon-location.svg" alt="icon-location" class="location">
+          <input 
+              type="text"
+              
+              placeholder="Filter by location..."
+              [(ngModel)]="filterLocation"
+              class="filter-location"   
+          >
+        </div>
+      </div>
+        
+      <div>
+        <div>
+          <input 
+              type="checkbox"
+              class="checkbox"
+              [(ngModel)]="fillterFullTime"
+          >
+          <p class="fulltime"> {{ isFilterActive ? 'Filter activated' : 'Full Time Only' }}</p>
+        </div>
+      </div>
 
-    <div class="jobs-container">
+      <div>
+        <button (click)="filterJobs()" class="search-btn"  >Search </button>
+      </div>
+    </div>
+</div>
+
+
+
+
+@if (loading && !error) {
+  <div class="w-full tracking-wider text-center text-primary">
+     Loading... please wait
+  </div>
+}
+
+    <div *ngIf="filterJobs" class="jobs-container">
+
       <div *ngFor="let job of filteredJobs" routerLink="/{{ job.id }}" class="jobs-card">
         <div [style.background-color]="job.logoBackground">
           <img [src]="job.logo" alt="job.title">
         </div>
   
         <div class="flex">
-          <div class="flex">
+          <div class="flex" style="display: flex; padding-top: 6px;">
             <p>{{ job.postedAt }}</p>
             <span></span> 
             <p>{{ job.contract }}</p>
@@ -19,7 +65,20 @@
         <h4>{{ job.location }}</h4>
 
       </div>
+
     </div>
 
-  
+    @if (filteredJobs.length === 0 && !loading) {
+      <div>
+          Whoops... 😒 No jobs found.
+      </div>
+    } @else if (filteredJobs) {
+      @if (!loading && !error) {
+          <div>
+              <button class="load-more-btn">Load More</button>
+          </div>
+      }
+  }
 
+  
+    <filter-bar *ngIf="jobService.isModalOpen" (filterApplied)="applyFilters($event)"></filter-bar>
