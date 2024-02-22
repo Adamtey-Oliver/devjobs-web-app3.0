@@ -1,7 +1,7 @@
 <div class="job-header" *ngIf="!loading && !error">
 
     <div class="company-img" [style.background-color]="jobInfo.logoBackground">
-        <img style="width: 81px; height: 140px; object-fit: contain;" [src]="jobInfo.logo" alt="job.title">
+        <img class="company-logo" [src]="jobInfo.logo" alt="job.title">
     </div>
     
     <span style="flex-grow: 1; ">

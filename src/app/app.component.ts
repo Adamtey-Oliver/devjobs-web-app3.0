@@ -90,6 +90,9 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class AppComponent implements OnInit {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   jobs: Jobs[] = [];
   filteredJobs: Jobs[] = [];
   isDarkMode: boolean = false;

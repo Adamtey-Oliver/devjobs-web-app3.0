@@ -22,6 +22,11 @@
     width: 140px;
     height: 140px;
 }
+.company-logo{
+  width: 50px;
+  height: 50px;
+  padding: 40px;
+}
 
 .company-site{
     border: none;
@@ -30,7 +35,7 @@
     background-color: none;
     width: 147px;
     height: 48px;
-    margin-right: 60px;
+    margin-right: 20px;
     transition: background-color 0.3s ease;
 }
 
@@ -117,7 +122,7 @@
 
 
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .job-header{
         position: absolute;
         top: 9%;
@@ -133,4 +138,63 @@
     .jobs-container {
       grid-template-columns: repeat(1, 1fr);
     }
+  } */
+
+
+  /* Tablet view */
+@media only screen and (max-width: 768px) {
+  .job-header {
+      width: 90%;
+      height: auto;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
   }
+
+  .jobs-info {
+      width: 90%;
+      margin-top: 160px;
+  }
+
+  .company-site {
+      margin-right: 10px;
+  }
+
+  .jobs-footer div {
+      margin: 5px 10px 0 10px;
+  }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 480px) {
+  .job-header {
+    width: 90%;
+    height: auto;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+  .job-header .company-img{
+    /* border-radius: 0 0 0 5px; */
+    width: 50px;
+    height: 50px;
+  }
+  .company-logo{
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+  }
+
+ 
+  .company-site {
+    margin-right: 0; /* Remove margin-right */
+    margin-top: 10px; /* Add margin-top for spacing */
+  }
+
+  .jobs-footer div {
+    margin: 5px 10px 0 10px;
+  }
+}
+

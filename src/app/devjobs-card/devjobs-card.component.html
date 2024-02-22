@@ -1,37 +1,27 @@
 <div class="filter-bar">
     <div class="filter-content">
-      <div style="border-right: 1px solid green; padding-right: 20px;">
+      <div>
         <img src="../../../assets/desktop/icon-search.svg" alt="icon-search">
         <input class="filter-text" type="text" [(ngModel)]="filterTitle" placeholder="Filter by title, companies, expertise…">
 
         <img class="filter-hidden" src="../../../assets/mobile/icon-filter.svg" (click)="jobService.isModalOpen = true" alt="icon-filter">
 
-        <button style="display: none;"  (click)="filterJobs()">
+        <button class="btn-hidden" (click)="filterJobs()">
             <img src="../../../assets/desktop/icon-search - white.svg" alt="icon-search">
         </button>
 
       </div>
-      
+
       <div>
-        <div style="border-right: 1px solid green; padding-right: 10px;">
+        <div>
           <img src="../../../assets/desktop/icon-location.svg" alt="icon-location" class="location">
-          <input 
-              type="text"
-              
-              placeholder="Filter by location..."
-              [(ngModel)]="filterLocation"
-              class="filter-location"   
-          >
+          <input type="text" placeholder="Filter by location..." [(ngModel)]="filterLocation" class="filter-location">
         </div>
       </div>
         
       <div>
         <div>
-          <input 
-              type="checkbox"
-              class="checkbox"
-              [(ngModel)]="fillterFullTime"
-          >
+          <input type="checkbox" class="checkbox" [(ngModel)]="fillterFullTime">
           <p class="fulltime">Full Time Only</p>
         </div>
       </div>
