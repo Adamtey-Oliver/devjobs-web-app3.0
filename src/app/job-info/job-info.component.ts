@@ -16,8 +16,6 @@ export class JobInfoComponent implements OnInit{
   jobInfo: Jobs = {} as Jobs;
   loading: boolean = false
   error: string = ''
-  // isDarkMode: boolean = false; 
-
 
   constructor( private jobService: JobService, 
     private activatedRoute: ActivatedRoute,
