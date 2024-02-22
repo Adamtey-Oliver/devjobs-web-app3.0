@@ -31,11 +31,11 @@
           <button class="apply-btn" (click)="redirect(jobInfo.website)"> Apply Now </button>
         </div>
 
-      <p>{{ jobInfo.description }}</p>
+      <p style="line-height: 26px;">{{ jobInfo.description }}</p>
 
       <h3> Requirements </h3>
       
-      <p>{{ jobInfo.requirements.content }}</p>
+      <p style="line-height: 26px;">{{ jobInfo.requirements.content }}</p>
       <ul>
           <li *ngFor="let list of jobInfo.requirements.items"> {{ list }} </li>
       </ul>
