@@ -1,3 +1,24 @@
+.dark-mode {
+    background-color: #19202D;
+    color: white;
+}
+
+.dark-mode .modal-container{
+    background-color: #19202D;
+}
+  
+.dark-mode input {
+    color: white;
+    background-color: #19202D;
+}
+
+.dark-mode .search-button{
+    cursor: pointer;
+}
+
+.dark-mode .checkboxx input[type="checkbox"] {
+    background-color: #19202D;
+}
 
 .modal-overlay {
     position: fixed;
@@ -17,15 +38,14 @@
     border-radius: 5px;
     width: 80%;
     max-width: 400px;
-}
-
-.close-icon {
-    width: 45%;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-content {
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .location-details,
@@ -34,12 +54,29 @@
     margin-bottom: 15px;
 }
 
-.divider {
-    height: 1px;
-    background: #333; 
-    margin: 10px 0;
+.location-details,
+.full-time-checkbox {
+    gap: 10px;
+    display: flex;
+    align-items: center;
 }
 
+.location-input{
+    border: none;
+    outline: none;
+}
 
+.full-time-checkbox {
+    gap: 10px;
+}
 
+.search-button {
+    display: flex;
+    justify-content: center;
+}
 
+.divider {
+    height: 1px;
+    background: #6E8098;
+    margin: 10px 0;
+}

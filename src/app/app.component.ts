@@ -1,78 +1,6 @@
-// import { Component, OnInit } from '@angular/core';
-// import { CommonModule } from '@angular/common';
-// import { RouterOutlet } from '@angular/router';
-// import { FilterBarComponent } from './filter-bar/filter-bar.component'; 
-// import { DevjobsCardComponent } from './devjobs-card/devjobs-card.component'; 
-// import { HeaderContentComponent } from './header-content/header-content.component';
-// import { ThemeService } from './theme.service';
-// import { LoadMoreBtnComponent } from './load-more-btn/load-more-btn.component';
-// import { JobService } from './job.service';
-// @Component({
-//   selector: 'app-root',
-//   standalone: true,
-//   imports: [CommonModule, RouterOutlet, DevjobsCardComponent,
-//     FilterBarComponent, HeaderContentComponent, LoadMoreBtnComponent],
-//   templateUrl: './app.component.html',
-//   styleUrl: './app.component.css'
-// })
-
-
-// export class AppComponent implements OnInit {
-
-//   jobs: Jobs[] = [];
-
-//   constructor(private jobService: JobService) {}
-
-//   ngOnInit() {
-//     this.jobService.getJobs().subscribe(
-//       (data) => {
-//         this.jobs = data;
-//       },
-//       (error) => {
-//         console.error('Error fetching jobs:', error);
-//       }
-//     );
-//   }
-
-
-
-//   title(title: any) {
-//     throw new Error('Method not implemented.');
-//   }
-//   isDarkMode: boolean = false;
-
-//   constructor(private themeService: ThemeService) {}
-
-//   ngOnInit() {
-//     this.themeService.isDarkMode$.subscribe((isDarkMode) => {
-//       this.isDarkMode = isDarkMode;
-//       this.updateTheme();
-//     });
-//   }
-
-//   updateTheme() {
-//     const body = document.body;
-//     body.style.backgroundColor = this.isDarkMode ? '#121721' : '#F2F2F2';
-//     body.style.color = this.isDarkMode ? 'white' : 'black';
-
-//     const filterBar = document.querySelector('.filter-bar') as HTMLElement;
-//     if (filterBar) {
-//       filterBar.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
-//       filterBar.style.color = this.isDarkMode ? 'white' : 'black';
-//     }
-
-//      const jobsCard = document.querySelectorAll('.jobs-card') as NodeListOf<HTMLElement>;
-//      jobsCard.forEach((card) => {
-//        card.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
-//        card.style.color = this.isDarkMode ? 'white' : 'black';
-//      });
-//   }
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { FilterBarComponent } from './filter-bar/filter-bar.component'; 
+import { RouterOutlet } from '@angular/router'; 
 import { DevjobsCardComponent } from './devjobs-card/devjobs-card.component'; 
 import { HeaderContentComponent } from './header-content/header-content.component';
 import { ThemeService } from './theme.service';
@@ -80,11 +8,11 @@ import { JobInfoComponent } from './job-info/job-info.component';
 import { JobService } from './job.service';
 import { Jobs } from './model/jobsdata';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, DevjobsCardComponent,
-    FilterBarComponent, HeaderContentComponent, FormsModule, JobInfoComponent], 
+  imports: [CommonModule, RouterOutlet, DevjobsCardComponent, HeaderContentComponent, FormsModule, JobInfoComponent, ModalComponent], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -100,15 +28,16 @@ export class AppComponent implements OnInit {
   jobsInfoElements: NodeListOf<HTMLElement> | null = null;
   jobFooter: HTMLElement | null = null;
   companySiteButton!: HTMLButtonElement;
+  modalOverlay!: HTMLElement;
+  modalContainer!: HTMLElement;
   
-
   constructor(private jobService: JobService, private themeService: ThemeService) {}
 
   ngOnInit() {
     this.jobService.getJobs().subscribe(
       (data) => {
         this.jobs = data;
-        this.filteredJobs = [...this.jobs]; // Initialize filteredJobs with all jobs
+        this.filteredJobs = [...this.jobs]; 
       },
       (error) => {
         console.error('Error fetching jobs:', error);
@@ -140,7 +69,7 @@ export class AppComponent implements OnInit {
     });
 
 
-    // Adjust input field color
+    // input field color
     const filtertext = document.querySelector('.filter-content .filter-text') as HTMLElement;
     if (filtertext) {
         filtertext.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
@@ -161,7 +90,7 @@ export class AppComponent implements OnInit {
     this.companySiteButton = document.querySelector('.company-site') as HTMLButtonElement;
 
     if (this.companySiteButton) {
-      // Set initial styles
+      // Sets initial styles
       this.companySiteButton.style.backgroundColor = this.isDarkMode ? '#6E8098' : '#F2F2F2';
       this.companySiteButton.style.color = this.isDarkMode ? 'white' : 'black';
 
@@ -191,7 +120,6 @@ export class AppComponent implements OnInit {
       this.jobsInfoElements.forEach((info) => {
         info.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
         info.style.color = this.isDarkMode ? 'white' : 'black';
-        // ... other styles for jobsInfo
       });
     } else {
       console.error('Could not find jobsInfo elements.');
@@ -204,19 +132,7 @@ export class AppComponent implements OnInit {
       this.jobFooter.style.backgroundColor = this.isDarkMode ? '#19202D' : '#F2F2F2';
       this.jobFooter.style.color = this.isDarkMode ? 'white' : 'black';
     }
+ 
   }
 
-  
-
-  // applyFilters(filters: { filterLocation: string, filterText: string }): void {
-   
-  //   this.filteredJobs = this.jobs.filter(job =>
-  //     job.location.includes(filters.filterLocation) &&
-  //     (job.position.includes(filters.filterText) || job.company.includes(filters.filterText))
-  //   );
-  // }
-  
-  
-
-  //OOPS
 }

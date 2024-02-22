@@ -1,74 +1,95 @@
 
 .h-contents h2,
 .h-toggle input {
-  color: black;
+color: black;
 }
 
 .dark-text .h-contents h2,
 .dark-text .h-toggle input {
-  color: white;
+color: white;
 }
 
 .h-contents {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* max-width: 1200px;  */
-    /* width: 10%;  */
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 95%;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 95%;
+  box-sizing: border-box;
+}
+
+.h-title {
+  margin: 0;
+  padding-left: 90px;
 }
   
-  .h-title {
-    margin: 0;
-    padding-left: 90px;
+.h-toggle img {
+  margin: 10PX;
+}  
+.h-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  display: block;
+  width: 45px;
+  height: 24px;
+  background-color: white;
+  border-radius: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: white;
+}
+
+label::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #5964E0;
+  border-radius: 50%;
+  top: 3px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked + label::before {
+  transform: translateX(20px);
+}
+
+@media only screen and (max-width: 480px) {
+  .h-contents {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 20px 20px;
   }
-   
-  .h-toggle img {
-    margin: 10PX;
-  }  
+
+  .h-title{
+    padding-left: 10px; 
+    padding-bottom: 50px;
+  }
+  .h-title h2{
+    margin-top: 8px;
+  }
+
   .h-toggle {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-top: 10px;
   }
-  
-  input[type="checkbox"] {
-    display: none;
+
+  .h-toggle img {
+    margin: 0 10px;
   }
-  
-  label {
-    display: block;
-    width: 45px;
-    height: 24px;
-    background-color: white;
-    border-radius: 18px;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  input[type="checkbox"]:checked + label {
-    background-color: white;
-  }
-  
-  label::before {
-    content: '';
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: #5964E0;
-    border-radius: 50%;
-    top: 3px;
-    left: 1px;
-    transition: transform 0.3s ease;
-  }
-  
-  input[type="checkbox"]:checked + label::before {
-    transform: translateX(20px);
-  }
-  
+}

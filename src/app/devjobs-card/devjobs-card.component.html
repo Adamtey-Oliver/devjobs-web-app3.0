@@ -1,13 +1,13 @@
 <div class="filter-bar">
     <div class="filter-content">
       <div>
-        <img src="../../../assets/desktop/icon-search.svg" alt="icon-search">
+        <img class="search-hidden" src="../../../assets/desktop/icon-search.svg" alt="icon-search">
         <input class="filter-text" type="text" [(ngModel)]="filterTitle" placeholder="Filter by title, companies, expertise…">
 
         <img class="filter-hidden" src="../../../assets/mobile/icon-filter.svg" (click)="jobService.isModalOpen = true" alt="icon-filter">
 
         <button class="btn-hidden" (click)="filterJobs()">
-            <img src="../../../assets/desktop/icon-search - white.svg" alt="icon-search">
+            <img class="img-color-change" src="../../../assets/desktop/icon-search.svg" alt="icon-search">
         </button>
 
       </div>
@@ -65,9 +65,7 @@
       </div>
   
       @if (filteredJobs.length === 0 && !loading) {
-        <div>
-            Whoops... 😒 No jobs found.
-        </div>
+        <div> Whoops... 😒 No jobs found. </div>
       } @else if (filteredJobs) {
         @if (!loading && !error) {
             <div>
