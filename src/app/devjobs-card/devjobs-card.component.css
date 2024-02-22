@@ -1,3 +1,22 @@
+
+.filter-bar::before,
+.filter-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #979797;
+}
+
+.filter-bar::before {
+  left: 67%;
+}
+
+.filter-bar::after {
+  right: 59%;
+}
+
 /* filter */
 .filter-hidden,
 .btn-hidden{
@@ -73,19 +92,32 @@
 @media (max-width: 1024px){ 
 
   .filter-content .fulltime{
-    padding-right: 40px;
+    margin-right: 20px;
+    white-space: nowrap; 
+    max-width: 96px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
   }
 
   .filter-bar {
     position: absolute;
-    top: 8%;
+    top: 13%;
     left: 50%;
   }
 
   .filter-content .search-btn {
-    width: 80px;
+    width: 60px;
     height: 48px;
     cursor: pointer;
+    margin-right: 20px; 
+  }
+
+  .filter-bar::before {
+    left: 56%;
+  }
+  
+  .filter-bar::after {
+    right: 75%;
   }
 
   .filter-content .filter-text {
@@ -109,8 +141,19 @@
 }
 
 @media (max-width: 768px) { 
+  .filter-bar::before,
+  .filter-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #979797;
+    display: none;
+  }
 
   .filter-bar {
+    width: 75%;
     border-radius: 5px;
     position: absolute;
     top: 12%;
@@ -127,11 +170,11 @@
 
   .filter-text{
     margin-left: 10px;
-    margin-right: 60px;
+    margin-right: 80px;
   }
   .filter-hidden,
   .btn-hidden {
-    margin-right: 5px; 
+    margin-right: 20px; 
     padding: 5px; 
   }
 
@@ -256,6 +299,7 @@
 @media (max-width: 768px) {
   .jobs-container {
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 90px; 
   }
 }
 
@@ -309,7 +353,7 @@
 
 @media screen and (max-width: 768px){
     .load-more-btn {
-        margin: 5rem 0rem 4rem 8rem;
+        margin: 2rem 0rem 4rem 10rem;
     }
 }
 
