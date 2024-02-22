@@ -10,23 +10,23 @@ import { JobService } from '../job.service';
   styleUrls: ['./filter-bar.component.css']
 })
 export class FilterBarComponent { 
-filterLocation: string = ''
-filterFullTime: boolean = false
-showModal: boolean = false
+// filterLocation: string = ''
+// filterFullTime: boolean = false
+// showModal: boolean = false
 
-constructor(public jobService: JobService) {}
+// constructor(public jobService: JobService) {}
 
-@Output()
-filterApplied = new EventEmitter<{location: string, fullTime: boolean }>()
+// @Output()
+// filterApplied = new EventEmitter<{location: string, fullTime: boolean }>()
 
-setModalOpen() {
-  this.showModal = true
-}
+// setModalOpen() {
+//   this.showModal = true
+// }
 
-applyFilteredJobs() {
-  this.filterApplied.emit({ location: this.filterLocation, fullTime: this.filterFullTime })
-  this.jobService.isModalOpen = false
-}
+// applyFilteredJobs() {
+//   this.filterApplied.emit({ location: this.filterLocation, fullTime: this.filterFullTime })
+//   this.jobService.isModalOpen = false
+// }
 
 }
 

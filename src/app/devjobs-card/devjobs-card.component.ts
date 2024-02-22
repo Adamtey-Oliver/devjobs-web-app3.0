@@ -33,11 +33,12 @@ import { JobService } from '../job.service';
 import { Jobs } from '../model/jobsdata';
 import { FormsModule } from '@angular/forms';
 import { FilterBarComponent } from '../filter-bar/filter-bar.component';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'devjobs-card',
   standalone: true,
-  imports: [CommonModule, RouterLink, FilterBarComponent, FormsModule],
+  imports: [CommonModule, RouterLink, FilterBarComponent, FormsModule, ModalComponent],
   templateUrl: './devjobs-card.component.html',
   styleUrls: ['./devjobs-card.component.css']
 })
@@ -51,18 +52,18 @@ export class DevjobsCardComponent implements OnInit {
   filterTitle: string = ''
   filterLocation: string = ''
   fillterFullTime: boolean = false
+// isFilterActive: any;
 
 
   ///delet
 
-  isMobile: boolean = false;
-  isFilterActive: boolean = false;
-  isSearchActive: any;
-   toggleSearch(): void {
-    this.isSearchActive = !this.isSearchActive;
-  //  this.cdr.detectChanges();
-    // this.handleSearch();
-  }
+  // isMobile: boolean = false;
+  // isFilterActive: boolean = false;
+  // isSearchActive: any;
+  //  toggleSearch(): void {
+  //   this.isSearchActive = !this.isSearchActive;
+
+  // }
 //delet end
 
 

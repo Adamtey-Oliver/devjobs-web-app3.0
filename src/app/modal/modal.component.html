@@ -1,0 +1,21 @@
+<div style="background-color: blueviolet;">
+    <span (click)="jobService.isModalOpen = false">
+        <img src="../../../assets/mobile/icon-close.svg" class="w-[45%]" alt="icon-close">
+    </span>
+
+    <div>
+        <div>
+            <img src="../../../assets/desktop/icon-location.svg" alt="icon-location">
+            <input type="text" placeholder="Filter by Location..." [(ngModel)]="filterLocation">
+        </div>
+
+        <div>
+            <input  type="checkbox" [(ngModel)]="filterFullTime">
+            <h4 class="font-bold">Full Time Only</h4>
+        </div>
+
+        <div>
+            <button (click)="applyFilteredJobs()">Search</button>
+        </div>
+    </div>
+</div>

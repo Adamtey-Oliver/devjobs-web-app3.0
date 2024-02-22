@@ -6,7 +6,7 @@
     
     <span style="flex-grow: 1; ">
         <h3 style="width: 78px; margin-left: 10%;" >{{ jobInfo.company}}</h3>
-        <p style="margin-top: 1px; margin-right: 50%;">{{ extractDomainName(jobInfo.website) }}</p>
+        <p style="margin-top: 1px; margin-right: 50%; color: #4b5563;">{{ extractDomainName(jobInfo.website) }}</p>
     </span>
     <button class="company-site" (click)="redirect(jobInfo.website)">Company Site</button>
 </div>
@@ -28,7 +28,7 @@
               <h3>{{ jobInfo.position }}</h3>
               <h4>{{ jobInfo.location }}</h4>
             </div>
-          <button (click)="redirect(jobInfo.website)"> Apply Now </button>
+          <button class="apply-btn" (click)="redirect(jobInfo.website)"> Apply Now </button>
         </div>
 
       <p>{{ jobInfo.description }}</p>
@@ -54,9 +54,9 @@
         <div>
             <span>
                 <h3>{{ jobInfo.position }}</h3>
-                <p>{{ jobInfo.company }}</p>
+                <p style="color: #4b5563;">{{ jobInfo.company }}</p>
             </span>
-            <button (click)="redirect(jobInfo.website)"> Apply Now </button>
+            <button class="apply-btn" (click)="redirect(jobInfo.website)"> Apply Now </button>
         </div>
     </div>
 </div>

@@ -90,15 +90,13 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class AppComponent implements OnInit {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
   jobs: Jobs[] = [];
   filteredJobs: Jobs[] = [];
   isDarkMode: boolean = false;
   jobHeader!: HTMLElement;
   jobsInfoElements: NodeListOf<HTMLElement> | null = null;
   jobFooter: HTMLElement | null = null;
+  companySiteButton!: HTMLButtonElement;
   
 
   constructor(private jobService: JobService, private themeService: ThemeService) {}
@@ -156,6 +154,25 @@ export class AppComponent implements OnInit {
         filterlocation.style.caretColor = this.isDarkMode ? 'blue' : 'defaultCursorColor'; 
     }
 
+
+    this.companySiteButton = document.querySelector('.company-site') as HTMLButtonElement;
+
+    if (this.companySiteButton) {
+      // Set initial styles
+      this.companySiteButton.style.backgroundColor = this.isDarkMode ? '#6E8098' : '#F2F2F2';
+      this.companySiteButton.style.color = this.isDarkMode ? 'white' : 'black';
+
+      // Add hover styles
+      this.companySiteButton.addEventListener('mouseover', () => {
+        this.companySiteButton.style.backgroundColor = this.isDarkMode ? '#9DAEC2' : '#939BF4';
+      });
+
+      // Reset to initial styles on mouseout
+      this.companySiteButton.addEventListener('mouseout', () => {
+        this.companySiteButton.style.backgroundColor = this.isDarkMode ? '#6E8098' : '#F2F2F2';
+      });
+    }
+
     // Apply styles for .job-header
     this.jobHeader = document.querySelector('.job-header') as HTMLElement;
     if (this.jobHeader) {
@@ -188,13 +205,13 @@ export class AppComponent implements OnInit {
 
   
 
-  applyFilters(filters: { filterLocation: string, filterText: string }): void {
-    // Your filtering logic goes here
-    this.filteredJobs = this.jobs.filter(job =>
-      job.location.includes(filters.filterLocation) &&
-      (job.position.includes(filters.filterText) || job.company.includes(filters.filterText))
-    );
-  }
+  // applyFilters(filters: { filterLocation: string, filterText: string }): void {
+   
+  //   this.filteredJobs = this.jobs.filter(job =>
+  //     job.location.includes(filters.filterLocation) &&
+  //     (job.position.includes(filters.filterText) || job.company.includes(filters.filterText))
+  //   );
+  // }
   
   
 

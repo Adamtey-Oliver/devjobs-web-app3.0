@@ -5,12 +5,12 @@ import { JobInfoComponent } from './job-info/job-info.component';
 export const routes: Routes = [
     {
         path: '',
-        title: 'Devjobs-web-app - Home',
+        title: 'Devjobs-web-app - Home Page',
         component: DevjobsCardComponent
     },
     {
         path: ':id',
-        title: 'Devjobs-web-app - Details',
+        title: 'Devjobs-web-app - Job Details',
         component: JobInfoComponent
     },
     {

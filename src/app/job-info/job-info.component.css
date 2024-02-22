@@ -1,5 +1,6 @@
 
 .job-header{
+    border-radius: 5px;
     background-color: #FFFFFF;
     width: 730px;
     height: 140px;
@@ -15,25 +16,33 @@
     align-items: center;
     /* padding-top: 1px; */
 }
+
 .job-header .company-img{
-    /* object-fit: cover; */
+    border-radius: 0 0 0 5px;
     width: 140px;
     height: 140px;
 }
 
 .company-site{
+    border: none;
+    border-radius: 5px;
     color: #5964E0;
+    background-color: none;
     width: 147px;
     height: 48px;
     margin-right: 60px;
+    transition: background-color 0.3s ease;
+}
+
+
+.company-site:hover {
+  background-color: #939BF4;
 }
 
 .job-details{
-    /* margin: 30px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding-top: 10px; */
 }
 
 .jobs-info{
@@ -94,14 +103,17 @@
     margin: 0;
   }
   
-  .jobs-footer button {
+  .apply-btn{
+    border-radius: 5px;
     background-color: #5964E0;
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
   }
-  
+  .apply-btn:hover{
+    background-color: #939BF4;
+  }
 
 
 
