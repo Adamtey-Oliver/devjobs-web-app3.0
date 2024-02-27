@@ -35,9 +35,7 @@
 
 <div>
   @if (loading && !error) {
-    <div class="w-full tracking-wider text-center text-primary">
-       Loading... please wait
-    </div>
+    <div style="margin-top: 10rem; text-align: center;"> Loading... please wait </div>
   }
   
       <div *ngIf="filterJobs" class="jobs-container">
@@ -65,7 +63,7 @@
       </div>
   
       @if (filteredJobs.length === 0 && !loading) {
-        <div> Whoops... 😒 No jobs found. </div>
+        <div style="text-align: center;"> Oops... 😪😒 No jobs found. </div>
       } @else if (filteredJobs) {
         @if (!loading && !error) {
             <div>
