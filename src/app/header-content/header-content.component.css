@@ -70,6 +70,31 @@ input[type="checkbox"]:checked + label::before {
   transform: translateX(20px);
 }
 
+@media screen and (max-width: 1024px) {
+  .h-contents {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 20px 20px;
+  }
+
+  .h-title{
+    padding-left: 70px; 
+    padding-bottom: 50px;
+  }
+  .h-title h2{
+    margin-top: 8px;
+  }
+
+  .h-toggle {
+    padding-right: 20px; 
+    margin-top: 10px;
+  }
+
+  .h-toggle img {
+    margin: 0 10px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .h-contents {
     flex-direction: row; 
