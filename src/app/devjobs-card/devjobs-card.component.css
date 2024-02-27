@@ -16,6 +16,7 @@
 .filter-hidden,
 .btn-hidden{
     display: none;
+    cursor: pointer;
 }
 .filter-bar{
   border-radius: 5px;
@@ -63,6 +64,7 @@
   width: 24px;
   height: 24px;
   border-radius: 3px; 
+  cursor: pointer;
 }
 .search-btn{
   width: 123px;
@@ -101,7 +103,7 @@
   .filter-content .filter-text {
     font-size: 16px; 
     white-space: nowrap; 
-    width: 128px;
+    width: 108px;
     overflow: hidden;
     text-overflow: ellipsis; 
   }
@@ -116,7 +118,8 @@
     width: 132px;
   }
 }
-@media (max-width: 768px) { 
+
+@media screen and (max-width: 768px) { 
   .filter-bar::before,
   .filter-bar::after {
     content: '';
