@@ -103,7 +103,7 @@
   .filter-content .filter-text {
     font-size: 16px; 
     white-space: nowrap; 
-    width: 138px;
+    width: 108px;
     overflow: hidden;
     text-overflow: ellipsis; 
   }
