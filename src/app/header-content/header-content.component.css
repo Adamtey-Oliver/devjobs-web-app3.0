@@ -120,7 +120,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .h-contents {
     flex-direction: row; 
     align-items: flex-start;
@@ -128,7 +128,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-title{
-    padding-left: 10px; 
+    padding-left: 0px; 
     padding-bottom: 50px;
   }
   .h-title h2{
@@ -136,6 +136,32 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-toggle {
+    padding-left: 119px;
+    margin-top: 10px;
+  }
+
+  .h-toggle img {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  .h-contents {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 20px 20px;
+  }
+
+  .h-title{
+    padding-left: 0px; 
+    padding-bottom: 50px;
+  }
+  .h-title h2{
+    margin-top: 8px;
+  }
+
+  .h-toggle {
+    padding-left: 85px;
     margin-top: 10px;
   }
 
