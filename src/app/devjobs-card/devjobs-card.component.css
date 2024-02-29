@@ -84,6 +84,7 @@
     text-overflow: ellipsis; 
   }
   .filter-bar {
+    width: 80%;
     position: absolute;
     top: 8%;
     left: 50%;
