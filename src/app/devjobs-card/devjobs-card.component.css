@@ -25,7 +25,7 @@
   height: 80px;
   margin: auto; 
   position: absolute;
-  top: 14%;
+  top: 17%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -74,6 +74,13 @@
   color: #FFFFFF;
   background-color: #5964E0;
   cursor: pointer;
+}
+@media (max-width: 1440px){
+  .filter-bar {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+  }
 }
 @media (max-width: 1024px){ 
   .filter-content .fulltime{
