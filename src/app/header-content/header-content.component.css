@@ -129,7 +129,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-title{
-    padding-left: 0px; 
+    padding-left: 10px; 
     padding-bottom: 50px;
   }
   .h-title h2{
@@ -137,7 +137,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-toggle {
-    padding-left: 119px;
+    padding-left: 156px;
     margin-top: 10px;
   }
 
