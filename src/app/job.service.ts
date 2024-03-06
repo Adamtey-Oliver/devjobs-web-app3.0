@@ -1,15 +1,3 @@
-// import { Injectable } from '@angular/core';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class JobService {
-
-//   constructor() { }
-// }
-
-
-
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
@@ -23,16 +11,6 @@ export class JobService {
   private devjobsUrl = 'https://64281ee346fd35eb7c4bfc31.mockapi.io/dev'
   public isModalOpen: boolean = false 
 
-
-  // Jobs() {
-  //   throw new Error('Method not implemented.');
-  // }
-  // private filterSource = new BehaviorSubject<{ filterLocation: string, filterText: string }>({ filterLocation: '', filterText: '' });
-  // currentFilters = this.filterSource.asObservable();
-
-  // updateFilters(filters: { filterLocation: string, filterText: string }): void {
-  //   this.filterSource.next(filters);
-  // }
 
   constructor(private http: HttpClient) { }
   getJobs(): Observable<Jobs[]> {
