@@ -146,7 +146,7 @@ input[type="checkbox"]:checked + label::before {
   }
 }
 
-@media screen and (max-width: 328px) {
+@media screen and (max-width: 390px) {
   .h-contents {
     flex-direction: row; 
     align-items: flex-start;
@@ -154,7 +154,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-title{
-    padding-left: 0px; 
+    padding-left: 8px; 
     padding-bottom: 50px;
   }
   .h-title h2{
@@ -162,7 +162,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-toggle {
-    padding-left: 85px;
+    padding-left: 114px;
     margin-top: 10px;
   }
 
