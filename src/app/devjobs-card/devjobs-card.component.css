@@ -224,7 +224,7 @@
   }
 }
 .jobs-container {
-  border: #5964E0 3px solid;
+  /* border: #5964E0 3px solid; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 40px auto;
