@@ -80,7 +80,7 @@ margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin:  5px 130px 0 130px;  
+  margin:  5px 18.5% 0 18.5%;  
 }
 .jobs-footer h3, .jobs-footer p {
   margin: 0;
@@ -95,6 +95,16 @@ margin: 0;
 }
 .apply-btn:hover{
   background-color: #939BF4;
+}
+@media (max-width: 1440px) {
+  .jobs-footer div {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  5px 130px 0 130px;  
+  }
 }
 @media (max-width: 1024px){ 
   .job-header {
