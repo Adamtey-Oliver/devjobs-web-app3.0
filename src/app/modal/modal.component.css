@@ -60,16 +60,29 @@
     display: flex;
     align-items: center;
 }
-
 .location-input{
     border: none;
     outline: none;
 }
-
 .full-time-checkbox {
     gap: 10px;
 }
-
+.checkboxx{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    background-color: #979797;
+}
+.checkboxx:checked {
+    background-color: #5964E0;
+}
+.checkboxx:checked::before {
+    content: '\2714'; 
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;;
+}
 .search-button {
     display: flex;
     justify-content: center;
@@ -80,3 +93,4 @@
     background: #6E8098;
     margin: 10px 0;
 }
+
