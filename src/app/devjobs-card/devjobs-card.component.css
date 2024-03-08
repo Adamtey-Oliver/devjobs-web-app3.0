@@ -342,7 +342,7 @@
   .jobs-card p,
   .jobs-card h3,
   .jobs-card h4 {
-    padding-left: 0; 
+    padding-left: 10px; 
   }
 }
 .load-more-btn {
