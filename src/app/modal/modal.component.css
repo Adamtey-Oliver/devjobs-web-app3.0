@@ -19,6 +19,22 @@
 .dark-mode .checkboxx input[type="checkbox"] {
     background-color: #19202D;
 }
+.dark-mode .checkboxx{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    background-color: #979797;
+}
+.dark-mode .checkboxx:checked {
+    background-color: #5964E0;
+}
+.dark-mode .checkboxx:checked::before {
+    content: '\2714'; 
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;;
+}
 
 .modal-overlay {
     position: fixed;
