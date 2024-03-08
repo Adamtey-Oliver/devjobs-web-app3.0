@@ -159,7 +159,6 @@
     position: absolute;
     top: 14%;
     left: 50%;
-    /* transform: translateX(-50%); */
   }
   .search-img{
     display: none;
@@ -168,7 +167,7 @@
       display: none;
   }
   .filter-text{
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 80px;
   }
   .filter-hidden,
@@ -186,7 +185,7 @@
     padding: 0; 
   }
   .btn-hidden img {
-    margin: 0; 
+    margin: -7px; 
     padding-right: 40px;
   }
   .img-color-change {
