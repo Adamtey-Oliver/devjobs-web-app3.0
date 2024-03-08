@@ -25,7 +25,7 @@
   height: 80px;
   margin: auto; 
   position: absolute;
-  top: 17%;
+  top: 29%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -65,6 +65,22 @@
   height: 24px;
   border-radius: 3px; 
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+  background-color: #979797;
+}
+
+.filter-content .checkbox:checked {
+  background-color: #5964E0;
+}
+
+.filter-content .checkbox:checked::before {
+  content: '\2714'; 
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;;
 }
 .search-btn{
   width: 123px;
@@ -86,13 +102,13 @@
   .filter-content .fulltime{
     margin-right: 7px;
     white-space: nowrap; 
-    max-width: 96px;
+    max-width: 86px;
     overflow: hidden; 
     text-overflow: ellipsis; 
   }
   .filter-bar {
     position: absolute;
-    top: 8%;
+    top: 13%;
     left: 50%;
   }
   .filter-content .search-btn {
@@ -138,11 +154,12 @@
     display: none;
   }
   .filter-bar {
-    width: 75%;
+    width: 77%;
     border-radius: 5px;
     position: absolute;
-    top: 8%;
+    top: 14%;
     left: 50%;
+    /* transform: translateX(-50%); */
   }
   .search-img{
     display: none;
@@ -241,7 +258,7 @@
     border-radius: 5px;
     padding: 20px;
     overflow: hidden;
-    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+    background-color: #FFFFFF;
     margin: 20px auto;
     box-sizing: border-box;
 }
@@ -278,6 +295,15 @@
 @media (max-width: 1440px) {
   .jobs-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .jobs-card {
+    width: 100%; 
+    margin: 20px 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr);
   }
   .jobs-card {
     width: 100%; 
@@ -332,6 +358,11 @@
 @media screen and (max-width: 1440px)  {
     .load-more-btn {
         margin: 5rem 6rem 5rem 34rem;
+    }
+}
+@media screen and (max-width: 1024px)  {
+    .load-more-btn {
+        margin: 5rem 6rem 5rem 23rem;
     }
 }
 @media screen and (max-width: 768px){
