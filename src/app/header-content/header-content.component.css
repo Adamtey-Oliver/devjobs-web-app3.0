@@ -170,3 +170,13 @@ input[type="checkbox"]:checked + label::before {
     margin: 0 10px;
   }
 }
+@media screen and (max-width: 320px) {
+  .h-title{
+    padding-left: 8px; 
+    padding-bottom: 50px;
+  }
+  .h-toggle {
+    padding-left: 64px;
+    margin-top: 10px;
+  }
+}
