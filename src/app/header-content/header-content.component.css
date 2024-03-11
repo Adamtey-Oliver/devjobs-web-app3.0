@@ -168,7 +168,6 @@ input[type="checkbox"]:checked + label::before {
     margin: 0 10px;
   }
 }
-
 @media screen and (max-width: 390px) {
   .h-contents {
     flex-direction: row; 
@@ -185,7 +184,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-toggle {
-    padding-left: 100px;
+    padding-left: 134px;
     margin-top: 10px;
   }
 

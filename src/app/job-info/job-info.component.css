@@ -41,18 +41,18 @@ background-color: #939BF4;
   align-items: center;
 }
 .jobs-info{
-margin: 40px auto;
-padding: 20px;
-margin-top: 160px;
-width: 730px;
-box-sizing: border-box; 
-padding: 20px;
-max-width: none;
-height: auto;
-border-radius: 5px;
-padding: 20px;
-box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.14), 0 4px 8px -1px rgba(0, 0, 0, 0.12);
-box-sizing: border-box;
+  margin: 40px auto;
+  padding: 20px;
+  margin-top: 160px;
+  width: 730px;
+  box-sizing: border-box; 
+  padding: 20px;
+  max-width: none;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
 }
 .info-card p, li{
   color: #4b5563;
