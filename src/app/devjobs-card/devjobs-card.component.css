@@ -240,7 +240,6 @@
   }
 }
 .jobs-container {
-  /* border: #5964E0 3px solid; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 40px auto;
@@ -267,7 +266,7 @@
   height: 50px;
   overflow: hidden;
   border-radius: 18px;
-  margin-top: -38px;
+  margin-top: -48px;
   position: absolute;
 }
 .jobs-card div[style^="background-color"] img {
@@ -282,8 +281,14 @@
 .jobs-card h4 {
     padding-left: 10px;
 }
+.jobs-card h3{
+  cursor: pointer;
+}
+.jobs-card h3:hover{
+  color: #4b5563;
+}
 .jobs-card p{
-    color: #4b5563;
+    color: #6E8098;
 }
 .jobs-card h4 {
   color: #5964E0;
