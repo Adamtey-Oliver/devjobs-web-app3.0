@@ -110,6 +110,11 @@ export class AppComponent implements OnInit {
     if (this.jobHeader) {
       this.jobHeader.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
       this.jobHeader.style.color = this.isDarkMode ? 'white' : 'black';
+
+      const paragraphs = this.jobHeader.querySelectorAll('p') as NodeListOf<HTMLElement>;
+      paragraphs.forEach((paragraph) => {
+      paragraph.style.color = this.isDarkMode ? '#9DAEC2' : '#6E8098';
+    });
     }
 
 
@@ -119,7 +124,14 @@ export class AppComponent implements OnInit {
       console.log('Found jobsInfo elements:', this.jobsInfoElements);
       this.jobsInfoElements.forEach((info) => {
         info.style.backgroundColor = this.isDarkMode ? '#19202D' : 'white';
-        info.style.color = this.isDarkMode ? 'white' : 'black';
+        // info.style.color = this.isDarkMode ? 'white' : '#19202D';
+        
+        
+        // Targeting paragraphs within the current element
+        const paragraphs = info.querySelectorAll('p, li') as NodeListOf<HTMLElement>;
+          paragraphs.forEach((paragraph) => {
+          paragraph.style.color = this.isDarkMode ? '#9DAEC2' : '#6E8098';
+        });
       });
     } else {
       console.error('Could not find jobsInfo elements.');
@@ -133,6 +145,10 @@ export class AppComponent implements OnInit {
       this.jobFooter.style.color = this.isDarkMode ? 'white' : 'black';
     }
  
+    const paragraphs = this.jobFooter.querySelectorAll('p') as NodeListOf<HTMLElement>;
+      paragraphs.forEach((paragraph) => {
+      paragraph.style.color = this.isDarkMode ? '#9DAEC2' : '#6E8098';
+    });
   }
 
 }
