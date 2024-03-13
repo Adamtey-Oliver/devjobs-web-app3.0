@@ -18,9 +18,10 @@
   height: 140px;
 }
 .company-logo{
-width: 50px;
-height: 50px;
-padding: 40px;
+  width: 50px;
+  height: 50px;
+  padding: 40px;
+  object-fit: contain;
 }
 .company-site{
   border: none;
@@ -54,16 +55,20 @@ background-color: #939BF4;
   box-sizing: border-box;
   background-color: #FFFFFF;
 }
-.info-card p, li{
-  color: #9DAEC2;
-}
+/* .info-card p, li{
+  color: #6E8098;
+} */
 .info-card li::marker{
   color: #5964E0;
 }
+.info-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 .info-card h4 {
-color: #5964E0;
-font-weight: bold;
-margin: 0;
+  color: #5964E0;
+  margin: 0;
 }
 .jobs-footer {
   background-color: #FFFFFF;
