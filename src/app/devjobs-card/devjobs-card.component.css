@@ -21,7 +21,7 @@
 .filter-bar{
   border-radius: 5px;
   background-color: #FFFFFF;
-  width: 80%;
+  width: 78%;
   height: 80px;
   margin: auto; 
   position: absolute;
@@ -91,8 +91,12 @@
   background-color: #5964E0;
   cursor: pointer;
 }
+.search-btn:hover{
+  background-color: #939BF4;
+}
 @media (max-width: 1440px){
   .filter-bar {
+    width: 83%;
     position: absolute;
     top: 13%;
     left: 50%;
@@ -108,7 +112,7 @@
   }
   .filter-bar {
     position: absolute;
-    top: 9%;
+    top: 8%;
     left: 50%;
   }
   .filter-content .search-btn {
@@ -353,12 +357,16 @@
 .load-more-btn {
     width: 141px;
     height: 48px;
+    border-radius: 5px;
     color: #FFFFFF;
     background-color: #5964E0;
     border: none;
     justify-content: center;
     margin: 3rem 5rem 5rem 55rem; 
     cursor: pointer;
+}
+.load-more-btn:hover{
+  background-color: #939BF4;
 }
 @media screen and (max-width: 1440px)  {
     .load-more-btn {
