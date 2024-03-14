@@ -24,7 +24,7 @@ color: white;
 
 .h-title {
   margin: 0;
-  padding-left: 160px;
+  padding-left: 178px;
 }
   
 .h-toggle img {
@@ -34,7 +34,7 @@ color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-right: 70px;
+  padding-right: 80px;
 }
 
 input[type="checkbox"] {
@@ -82,7 +82,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-title{
-    padding-left: 100px; 
+    padding-left: 82px; 
     padding-bottom: 50px;
   }
   .h-title h2{
@@ -90,7 +90,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-toggle {
-    padding-right: 34px; 
+    padding-right: 15px; 
     margin-top: 10px;
   }
 
@@ -106,7 +106,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-title{
-    padding-left: 70px; 
+    padding-left: 50px; 
     padding-bottom: 50px;
   }
   .h-title h2{
@@ -114,7 +114,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .h-toggle {
-    padding-right: 20px; 
+    padding-right: 2px; 
     margin-top: 10px;
   }
 
