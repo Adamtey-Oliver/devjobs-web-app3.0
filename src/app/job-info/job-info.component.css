@@ -55,9 +55,6 @@ background-color: #939BF4;
   box-sizing: border-box;
   background-color: #FFFFFF;
 }
-/* .info-card p, li{
-  color: #6E8098;
-} */
 .info-card li::marker{
   color: #5964E0;
 }
