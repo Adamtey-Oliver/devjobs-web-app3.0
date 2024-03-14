@@ -14,8 +14,8 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./devjobs-card.component.css']
 })
 export class DevjobsCardComponent implements OnInit {
-
-
+  initialJobsToShow = 9;
+  totalJobsToShow: number;
   jobs: Jobs[] = []
   loading: boolean = true
   error: string = ''
@@ -24,7 +24,12 @@ export class DevjobsCardComponent implements OnInit {
   filterLocation: string = ''
   fillterFullTime: boolean = false
 
-  constructor (public jobService: JobService) {}
+  constructor (public jobService: JobService) {
+    this.totalJobsToShow = this.initialJobsToShow;
+  }
+  loadMoreJobs() {
+    this.totalJobsToShow += 9; 
+  }
 
   ngOnInit(): void {
     this.jobService.getJobs().subscribe({

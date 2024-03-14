@@ -40,7 +40,7 @@
   
       <div *ngIf="filterJobs" class="jobs-container">
   
-        <div *ngFor="let job of filteredJobs" routerLink="/{{ job.id }}" class="jobs-card">
+        <div *ngFor="let job of filteredJobs.slice(0, totalJobsToShow)" routerLink="/{{ job.id }}" class="jobs-card">
           <div [style.background-color]="job.logoBackground">
             <img [src]="job.logo" alt="job.title">
           </div>
@@ -66,8 +66,8 @@
         <div style="text-align: center;"> Oops... 😪😒 No jobs found. </div>
       } @else if (filteredJobs) {
         @if (!loading && !error) {
-            <div>
-                <button class="load-more-btn">Load More</button>
+            <div *ngIf="totalJobsToShow < filteredJobs.length && !loading && !error">
+                <button class="load-more-btn" (click)="loadMoreJobs()">Load More</button>
             </div>
         }
     }
