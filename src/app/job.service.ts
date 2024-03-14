@@ -7,8 +7,8 @@ import { Jobs } from './model/jobsdata';
 })
 export class JobService {
 
-  private devjobsUrl = 'http://localhost:3000/Jobs'
-  // private devjobsUrl = 'https://64281ee346fd35eb7c4bfc31.mockapi.io/dev'
+  // private devjobsUrl = 'http://localhost:3000/Jobs'
+  private devjobsUrl = 'https://64281ee346fd35eb7c4bfc31.mockapi.io/dev'
   public isModalOpen: boolean = false 
 
 
